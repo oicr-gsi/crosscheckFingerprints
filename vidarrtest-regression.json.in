@@ -43,7 +43,10 @@
             "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null
         },
         "description": "crosscheckFingerprints workflow test",
-        "engineArguments": {},
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
         "id": "pcsi",
         "metadata": {
             "crosscheckFingerprints.crosscheckMetrics": {
