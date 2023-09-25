@@ -26,7 +26,7 @@ workflow crosscheckFingerprints {
                 url: "https://gatk.broadinstitute.org/hc/en-us/articles/360056798851--GATK-4-2-release"
             },
             {
-                name: "crosscheckfingerprints-haplotype-map/20210201",
+                name: "crosscheckfingerprints-haplotype-map/20230324",
                 url: "https://github.com/oicr-gsi/fingerprint_maps"
             }
         ]
@@ -60,7 +60,7 @@ task runCrosscheckFingerprints {
         Int exitCodeWhenNoValidChecks = 0
         Float lodThreshold = 0.0
         String validationStringency = "SILENT"
-        String modules = "gatk/4.2.0.0 crosscheckfingerprints-haplotype-map/20210201"
+        String modules = "gatk/4.2.0.0 crosscheckfingerprints-haplotype-map/20230324"
         Int threads = 4
         Int jobMemory = 6
         Int timeout = 6
