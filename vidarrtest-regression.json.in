@@ -70,7 +70,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/output_expectation/pcsi.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/output_expectation/v2_pcsi.metrics",
                 "type": "script"
             }
         ]
