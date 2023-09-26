@@ -87,7 +87,7 @@ task runCrosscheckFingerprints {
     command <<<
         set -eu -o pipefail
 
-        $GATK_ROOT/bin/gatk --java-options "-Xmx{picardMaxMemMb}M" CrosscheckFingerprints \
+        $GATK_ROOT/bin/gatk --java-options "-Xmx"{picardMaxMemMb}"M" CrosscheckFingerprints \
         ~{sep=" " inputCommand} \
         HAPLOTYPE_MAP=~{haplotypeMap} \
         OUTPUT=~{outputPrefix}.crosscheck_metrics.txt \
