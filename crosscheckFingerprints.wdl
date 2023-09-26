@@ -56,6 +56,7 @@ task runCrosscheckFingerprints {
         String haplotypeMap
         String outputPrefix
         String crosscheckBy = "READGROUP"
+        Int picardMaxMemMb = 3000
         Int exitCodeWhenMismatch = 0
         Int exitCodeWhenNoValidChecks = 0
         Float lodThreshold = 0.0
@@ -72,6 +73,7 @@ task runCrosscheckFingerprints {
         haplotypeMap: "The file that lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting."
         outputPrefix: "Text to prepend to all output."
         crosscheckBy: "Specificies which data-type should be used as the basic comparison unit. Fingerprints from readgroups can be 'rolled-up' to the LIBRARY, SAMPLE, or FILE level before being compared. Fingerprints from VCF can be be compared by SAMPLE or FILE."
+        picardMaxMemMb: "Passed to Java -Xmx (in Mb)."
         exitCodeWhenMismatch: "When one or more mismatches between groups is detected, exit with this value instead of 0."
         exitCodeWhenNoValidChecks: "When all LOD score are zero, exit with this value."
         lodThreshold: "If any two groups (with the same sample name) match with a LOD score lower than the threshold the tool will exit with a non-zero code to indicate error. Program will also exit with an error if it finds two groups with different sample name that match with a LOD score greater than -LOD_THRESHOLD. LOD score 0 means equal likelihood that the groups match vs. come from different individuals, negative LOD score -N, mean 10^N time more likely that the groups are from different individuals, and +N means 10^N times more likely that the groups are from the same individual."
@@ -85,7 +87,7 @@ task runCrosscheckFingerprints {
     command <<<
         set -eu -o pipefail
 
-        $GATK_ROOT/bin/gatk CrosscheckFingerprints \
+        $GATK_ROOT/bin/gatk --java-options "-Xmx{picardMaxMemMb}M" CrosscheckFingerprints \
         ~{sep=" " inputCommand} \
         HAPLOTYPE_MAP=~{haplotypeMap} \
         OUTPUT=~{outputPrefix}.crosscheck_metrics.txt \
