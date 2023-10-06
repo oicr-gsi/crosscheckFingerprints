@@ -30,7 +30,6 @@
                 }
             ],
             "crosscheckFingerprints.outputPrefix": "PCSI_TEST",
-            "crosscheckFingerprints.runCrosscheckFingerprints.additionalParameters": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.crosscheckBy": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenMismatch": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenNoValidChecks": null,

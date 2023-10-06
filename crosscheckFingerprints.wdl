@@ -22,8 +22,8 @@ workflow crosscheckFingerprints {
         dependencies:
         [
             {
-                name: "gatk/4.2.0.0",
-                url: "https://gatk.broadinstitute.org/hc/en-us/articles/360056798851--GATK-4-2-release"
+                name: "picard/3.1.0",
+                url: "https://github.com/broadinstitute/picard/releases/tag/3.1.0"
             },
             {
                 name: "crosscheckfingerprints-haplotype-map/20230324",
@@ -61,7 +61,7 @@ task runCrosscheckFingerprints {
         Int exitCodeWhenNoValidChecks = 0
         Float lodThreshold = 0.0
         String validationStringency = "SILENT"
-        String modules = "gatk/4.2.0.0 crosscheckfingerprints-haplotype-map/20230324"
+        String modules = "picard/3.1.0 crosscheckfingerprints-haplotype-map/20230324"
         Int threads = 4
         Int jobMemory = 6
         Int timeout = 6
@@ -87,7 +87,7 @@ task runCrosscheckFingerprints {
     command <<<
         set -eu -o pipefail
 
-        $GATK_ROOT/bin/gatk --java-options "-Xmx~{picardMaxMemMb}M" CrosscheckFingerprints \
+        java -Xmx~{picardMaxMemMb}M -jar $PICARD_ROOT/picard.jar CrosscheckFingerprints \
         ~{sep=" " inputCommand} \
         HAPLOTYPE_MAP=~{haplotypeMap} \
         OUTPUT=~{outputPrefix}.crosscheck_metrics.txt \
