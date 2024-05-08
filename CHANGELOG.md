@@ -1,3 +1,6 @@
+## [Unreleased]
+- README has correct module information.
+
 ## 2.0.0 - 2023-09-25
 - Switched from Picard 2.21 to GATK 4.2. This has been shown to produce significantly different LOD scores
 - Removed the `additionalParameters` parameter. That parameter was a bad design decision.
