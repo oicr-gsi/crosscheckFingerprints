@@ -6,8 +6,8 @@ Checks if all the genetic data within a set of files appear to come from the sam
 
 ## Dependencies
 
-* [picard 2.21.2](https://broadinstitute.github.io/picard/command-line-overview.html#Overview)
-* [crosscheckfingerprints-haplotype-map 20210201](https://github.com/oicr-gsi/fingerprint_maps)
+* [gatk 4.2.0.0](https://gatk.broadinstitute.org/hc/en-us/articles/360056798851--GATK-4-2-release)
+* [crosscheckfingerprints-haplotype-map 20230324](https://github.com/oicr-gsi/fingerprint_maps)
 
 
 ## Usage
@@ -42,8 +42,7 @@ Parameter|Value|Default|Description
 `runCrosscheckFingerprints.exitCodeWhenNoValidChecks`|Int|0|When all LOD score are zero, exit with this value.
 `runCrosscheckFingerprints.lodThreshold`|Float|0.0|If any two groups (with the same sample name) match with a LOD score lower than the threshold the tool will exit with a non-zero code to indicate error. Program will also exit with an error if it finds two groups with different sample name that match with a LOD score greater than -LOD_THRESHOLD. LOD score 0 means equal likelihood that the groups match vs. come from different individuals, negative LOD score -N, mean 10^N time more likely that the groups are from different individuals, and +N means 10^N times more likely that the groups are from the same individual.
 `runCrosscheckFingerprints.validationStringency`|String|"SILENT"|Validation stringency for all SAM files read by this program. Setting stringency to SILENT can improve performance when processing a BAM file in which variable-length data (read, qualities, tags) do not otherwise need to be decoded. See https://jira.oicr.on.ca/browse/GC-8372 for why this is set to SILENT for OICR purposes.
-`runCrosscheckFingerprints.modules`|String|"picard/2.21.2 crosscheckfingerprints-haplotype-map/20210201"|Modules to load for this workflow.
-`runCrosscheckFingerprints.additionalParameters`|String?|None|Any additional parameters that need to be passed Picard.
+`runCrosscheckFingerprints.modules`|String|"gatk/4.2.0.0 crosscheckfingerprints-haplotype-map/20230324"|Modules to load for this workflow.
 `runCrosscheckFingerprints.threads`|Int|4|Requested CPU threads.
 `runCrosscheckFingerprints.jobMemory`|Int|6|Memory (GB) allocated for this job.
 `runCrosscheckFingerprints.timeout`|Int|6|Number of hours before task timeout.
@@ -51,35 +50,11 @@ Parameter|Value|Default|Description
 
 ### Outputs
 
-Output | Type | Description
----|---|---
-`crosscheckMetrics`|File|The crosschecksMetrics file produced by Picard CrosscheckFingerprints
-`crosscheckMetricsMatrix`|File|Matrix of LOD scores. This is less informative than the metrics output and only contains Normal-Normal LOD score (i.e. doesn't account for Loss of Heterozygosity.
+Output | Type | Description | Labels
+---|---|---|---
+`crosscheckMetrics`|File|The crosschecksMetrics file produced by Picard CrosscheckFingerprints|vidarr_label: crosscheckMetrics
+`crosscheckMetricsMatrix`|File|Matrix of LOD scores. This is less informative than the metrics output and only contains Normal-Normal LOD score (i.e. doesn't account for Loss of Heterozygosity.|vidarr_label: crosscheckMetricsMatrix
 
-
-## Niassa + Cromwell
-
-This WDL workflow is wrapped in a Niassa workflow (https://github.com/oicr-gsi/pipedev/tree/master/pipedev-niassa-cromwell-workflow) so that it can used with the Niassa metadata tracking system (https://github.com/oicr-gsi/niassa).
-
-* Building
-```
-mvn clean install
-```
-
-* Testing
-```
-mvn clean verify \
--Djava_opts="-Xmx1g -XX:+UseG1GC -XX:+UseStringDeduplication" \
--DrunTestThreads=2 \
--DskipITs=false \
--DskipRunITs=false \
--DworkingDirectory=/path/to/tmp/ \
--DschedulingHost=niassa_oozie_host \
--DwebserviceUrl=http://niassa-url:8080 \
--DwebserviceUser=niassa_user \
--DwebservicePassword=niassa_user_password \
--Dcromwell-host=http://cromwell-url:8000
-```
 
 ## Support
 
