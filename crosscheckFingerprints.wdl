@@ -30,10 +30,16 @@ workflow crosscheckFingerprints {
                 url: "https://github.com/oicr-gsi/fingerprint_maps"
             }
         ]
-        output_meta: {
-            crosscheckMetrics: "The crosschecksMetrics file produced by Picard CrosscheckFingerprints",
-            crosscheckMetricsMatrix: "Matrix of LOD scores. This is less informative than the metrics output and only contains Normal-Normal LOD score (i.e. doesn't account for Loss of Heterozygosity."
-        }
+    output_meta: {
+    crosscheckMetrics: {
+        description: "The crosschecksMetrics file produced by Picard CrosscheckFingerprints",
+        vidarr_label: "crosscheckMetrics"
+    },
+    crosscheckMetricsMatrix: {
+        description: "Matrix of LOD scores. This is less informative than the metrics output and only contains Normal-Normal LOD score (i.e. doesn't account for Loss of Heterozygosity.",
+        vidarr_label: "crosscheckMetricsMatrix"
+    }
+}
     }
 
 
