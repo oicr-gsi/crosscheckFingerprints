@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 2.2.0 - 2025-02-04
 - Switch from GATK 4.2 to Picard 3.1. GATK 4.2 is 50 times slower than Picard for unknown reason.
 
 ## 2.1.0 - 2024-06-25
