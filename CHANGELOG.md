@@ -1,4 +1,5 @@
 ## Unreleased
+- Add new Vidarr retry syntax to resource parameters
 
 ## 2.2.0 - 2025-02-04
 - Switch from GATK 4.2 to Picard 3.1. GATK 4.2 is 50 times slower than Picard for unknown reason.

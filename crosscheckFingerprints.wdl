@@ -79,15 +79,24 @@ task runCrosscheckFingerprints {
         haplotypeMap: "The file that lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting."
         outputPrefix: "Text to prepend to all output."
         crosscheckBy: "Specificies which data-type should be used as the basic comparison unit. Fingerprints from readgroups can be 'rolled-up' to the LIBRARY, SAMPLE, or FILE level before being compared. Fingerprints from VCF can be be compared by SAMPLE or FILE."
-        picardMaxMemMb: "Passed to Java -Xmx (in Mb)."
+        picardMaxMemMb: {
+            description: "Passed to Java -Xmx (in Mb).",
+            vidarr_retry: true
+        }
         exitCodeWhenMismatch: "When one or more mismatches between groups is detected, exit with this value instead of 0."
         exitCodeWhenNoValidChecks: "When all LOD score are zero, exit with this value."
         lodThreshold: "If any two groups (with the same sample name) match with a LOD score lower than the threshold the tool will exit with a non-zero code to indicate error. Program will also exit with an error if it finds two groups with different sample name that match with a LOD score greater than -LOD_THRESHOLD. LOD score 0 means equal likelihood that the groups match vs. come from different individuals, negative LOD score -N, mean 10^N time more likely that the groups are from different individuals, and +N means 10^N times more likely that the groups are from the same individual."
         validationStringency: "Validation stringency for all SAM files read by this program. Setting stringency to SILENT can improve performance when processing a BAM file in which variable-length data (read, qualities, tags) do not otherwise need to be decoded. See https://jira.oicr.on.ca/browse/GC-8372 for why this is set to SILENT for OICR purposes."
         modules: "Modules to load for this workflow."
         threads: "Requested CPU threads."
-        jobMemory: "Memory (GB) allocated for this job."
-        timeout: "Number of hours before task timeout."
+        jobMemory: {
+            description: "Memory (GB) allocated for this job.",
+            vidarr_retry: true
+        }
+        timeout: {
+            description: "Number of hours before task timeout.",
+            vidarr_retry: true
+        }
     }
 
     command <<<
