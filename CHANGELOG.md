@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 2.3.0 - 2025-02-27
 - Add new Vidarr retry syntax to resource parameters
 
 ## 2.2.0 - 2025-02-04
