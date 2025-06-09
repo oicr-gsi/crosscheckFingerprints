@@ -2,11 +2,11 @@
     {
         "arguments": {
             "crosscheckFingerprints.haplotypeMapDir": null,
-            "crosscheckFingerprints.haplotypeMapFileName": "oicr_hg19_chr.map",
+            "crosscheckFingerprints.haplotypeMapFileName": "oicr_hg38_chr.map",
             "crosscheckFingerprints.inputs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/PCSI_0090_Ly_R_PE_598_WG_170201_D00355_0145_ACADTLANXX_GTAGAG_L008_001.annotated.chr22.bam",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -18,7 +18,43 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/PCSI_0090_Pa_P_PE_501_WG_526_170203_D00343_0160_ACACFLANXX_CCGTCC_L008_001.annotated.chr22.bam",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -29,8 +65,35 @@
                     "type": "EXTERNAL"
                 }
             ],
-            "crosscheckFingerprints.outputPrefix": "PCSI_TEST",
-            "crosscheckFingerprints.runCrosscheckFingerprints.crosscheckBy": null,
+            "crosscheckFingerprints.cachedFilePath": null,
+            "crosscheckFingerprints.calculateTumorAwareResults": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.crosscheckBy": null,
+            "crosscheckFingerprints.inputsToFile.jobMemory": null,
+            "crosscheckFingerprints.inputsToFile.threads": null,
+            "crosscheckFingerprints.inputsToFile.timeout": null,
+            "crosscheckFingerprints.outputPrefix": "out",
+            "crosscheckFingerprints.runCached.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCached.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.jobMemory": null,
+            "crosscheckFingerprints.runCachedInverse.lodThreshold": null,
+            "crosscheckFingerprints.runCachedInverse.modules": null,
+            "crosscheckFingerprints.runCachedInverse.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCachedInverse.threads": null,
+            "crosscheckFingerprints.runCachedInverse.timeout": null,
+            "crosscheckFingerprints.runCachedInverse.validationStringency": null,
+            "crosscheckFingerprints.runCached.jobMemory": null,
+            "crosscheckFingerprints.runCached.lodThreshold": null,
+            "crosscheckFingerprints.runCached.modules": null,
+            "crosscheckFingerprints.runCached.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCached.threads": null,
+            "crosscheckFingerprints.runCached.timeout": null,
+            "crosscheckFingerprints.runCached.validationStringency": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.compareAgainst": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenMismatch": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenNoValidChecks": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.jobMemory": null,
@@ -39,27 +102,22 @@
             "crosscheckFingerprints.runCrosscheckFingerprints.picardMaxMemMb": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.threads": null,
             "crosscheckFingerprints.runCrosscheckFingerprints.timeout": null,
-            "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null
+            "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null,
+            "crosscheckFingerprints.usePowerOfCache.jobMemory": null,
+            "crosscheckFingerprints.usePowerOfCache.threads": null,
+            "crosscheckFingerprints.usePowerOfCache.timeout": null
         },
-        "description": "crosscheckFingerprints workflow test",
+        "description": "Standard workflow without a past cache",
         "engineArguments": {
             "write_to_cache": false,
             "read_from_cache": false
         },
-        "id": "pcsi",
+        "id": "no_cache",
         "metadata": {
             "crosscheckFingerprints.crosscheckMetrics": {
                 "contents": [
                     {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_pcsi_@JENKINSID@"
-                    }
-                ],
-                "type": "ALL"
-            },
-            "crosscheckFingerprints.crosscheckMetricsMatrix": {
-                "contents": [
-                    {
-                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_pcsi_@JENKINSID@"
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_no_cache@JENKINSID@"
                     }
                 ],
                 "type": "ALL"
@@ -69,7 +127,249 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/output_expectation/v2_pcsi.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/no_cache.crosscheck_metrics.txt",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "crosscheckFingerprints.haplotypeMapDir": null,
+            "crosscheckFingerprints.haplotypeMapFileName": "oicr_hg38_chr.map",
+            "crosscheckFingerprints.inputs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "crosscheckFingerprints.cachedFilePath": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/no_cache.crosscheck_metrics.txt",
+            "crosscheckFingerprints.calculateTumorAwareResults": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.crosscheckBy": null,
+            "crosscheckFingerprints.inputsToFile.jobMemory": null,
+            "crosscheckFingerprints.inputsToFile.threads": null,
+            "crosscheckFingerprints.inputsToFile.timeout": null,
+            "crosscheckFingerprints.outputPrefix": "out",
+            "crosscheckFingerprints.runCached.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCached.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.jobMemory": null,
+            "crosscheckFingerprints.runCachedInverse.lodThreshold": null,
+            "crosscheckFingerprints.runCachedInverse.modules": null,
+            "crosscheckFingerprints.runCachedInverse.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCachedInverse.threads": null,
+            "crosscheckFingerprints.runCachedInverse.timeout": null,
+            "crosscheckFingerprints.runCachedInverse.validationStringency": null,
+            "crosscheckFingerprints.runCached.jobMemory": null,
+            "crosscheckFingerprints.runCached.lodThreshold": null,
+            "crosscheckFingerprints.runCached.modules": null,
+            "crosscheckFingerprints.runCached.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCached.threads": null,
+            "crosscheckFingerprints.runCached.timeout": null,
+            "crosscheckFingerprints.runCached.validationStringency": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.compareAgainst": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.lodThreshold": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.modules": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null,
+            "crosscheckFingerprints.usePowerOfCache.jobMemory": null,
+            "crosscheckFingerprints.usePowerOfCache.threads": null,
+            "crosscheckFingerprints.usePowerOfCache.timeout": null
+        },
+        "description": "Input matches cache perfectly",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "id": "no_change",
+        "metadata": {
+            "crosscheckFingerprints.crosscheckMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_no_change@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/no_change.crosscheck_metrics.txt",
+                "type": "script"
+            }
+        ]
+    },
+    {
+        "arguments": {
+            "crosscheckFingerprints.haplotypeMapDir": null,
+            "crosscheckFingerprints.haplotypeMapFileName": "oicr_hg38_chr.map",
+            "crosscheckFingerprints.inputs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_0134_02_LB01-01_20241216_LH00130_0106_B22K77MLT4_7_CAGTTCTG-GTCAGTCA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_0134_01_LB01-01_20241216_LH00130_0106_B22K77MLT4_8_TTGGTGAG-CACGTCTA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "crosscheckFingerprints.cachedFilePath": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/no_cache.crosscheck_metrics.txt",
+            "crosscheckFingerprints.calculateTumorAwareResults": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.crosscheckBy": null,
+            "crosscheckFingerprints.inputsToFile.jobMemory": null,
+            "crosscheckFingerprints.inputsToFile.threads": null,
+            "crosscheckFingerprints.inputsToFile.timeout": null,
+            "crosscheckFingerprints.outputPrefix": "out",
+            "crosscheckFingerprints.runCached.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCached.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.jobMemory": null,
+            "crosscheckFingerprints.runCachedInverse.lodThreshold": null,
+            "crosscheckFingerprints.runCachedInverse.modules": null,
+            "crosscheckFingerprints.runCachedInverse.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCachedInverse.threads": null,
+            "crosscheckFingerprints.runCachedInverse.timeout": null,
+            "crosscheckFingerprints.runCachedInverse.validationStringency": null,
+            "crosscheckFingerprints.runCached.jobMemory": null,
+            "crosscheckFingerprints.runCached.lodThreshold": null,
+            "crosscheckFingerprints.runCached.modules": null,
+            "crosscheckFingerprints.runCached.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCached.threads": null,
+            "crosscheckFingerprints.runCached.timeout": null,
+            "crosscheckFingerprints.runCached.validationStringency": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.compareAgainst": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.lodThreshold": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.modules": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null,
+            "crosscheckFingerprints.usePowerOfCache.jobMemory": null,
+            "crosscheckFingerprints.usePowerOfCache.threads": null,
+            "crosscheckFingerprints.usePowerOfCache.timeout": null
+        },
+        "description": "Cache with stale and new files",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "id": "stale_and_new",
+        "metadata": {
+            "crosscheckFingerprints.crosscheckMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_stale_and_new@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/stale_and_new.crosscheck_metrics.txt",
                 "type": "script"
             }
         ]

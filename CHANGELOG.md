@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 3.0.0 - 2025-06-16
+- A previously cached result is an optional parameter. If supplied, only new comparisons will be calculated.
+- Expose `calculateTumorAwareResults` option (default false). We don't use this metric and its use lengthens run time.
+
 ## 2.3.0 - 2025-02-27
 - Add new Vidarr retry syntax to resource parameters
 
