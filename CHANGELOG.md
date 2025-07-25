@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 3.1.0 - 2025-07-25
 - Fixed bug where workflow would crash if the cache was all stale libraries
 
 ## 3.0.0 - 2025-06-16
