@@ -86,16 +86,19 @@ workflow crosscheckFingerprints {
                     calculateTumorAwareResults = calculateTumorAwareResults
             }
 
-            # Do the inverse. Compare cached inputs against new inputs
-            # This ensures that the matrix remains symmetrical
-            call runCrosscheckFingerprints as runCachedInverse {
-                input:
-                    compare = usePowerOfCache.cachedInput,
-                    compareAgainst = usePowerOfCache.newInput,
-                    haplotypeMap = haplotypeMap,
-                    outputPrefix = outputPrefix,
-                    crosscheckBy = crosscheckBy,
-                    calculateTumorAwareResults = calculateTumorAwareResults
+            # Cannot run this if all the cached files have become stale
+            if (usePowerOfCache.cachedCount > 0) {
+                # Do the inverse. Compare cached inputs against new inputs
+                # This ensures that the matrix remains symmetrical
+                call runCrosscheckFingerprints as runCachedInverse {
+                    input:
+                        compare = usePowerOfCache.cachedInput,
+                        compareAgainst = usePowerOfCache.newInput,
+                        haplotypeMap = haplotypeMap,
+                        outputPrefix = outputPrefix,
+                        crosscheckBy = crosscheckBy,
+                        calculateTumorAwareResults = calculateTumorAwareResults
+                }
             }
         }
 

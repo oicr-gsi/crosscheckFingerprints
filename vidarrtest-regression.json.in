@@ -373,5 +373,138 @@
                 "type": "script"
             }
         ]
+    },
+    {
+        "arguments": {
+            "crosscheckFingerprints.haplotypeMapDir": null,
+            "crosscheckFingerprints.haplotypeMapFileName": "oicr_hg38_chr.map",
+            "crosscheckFingerprints.inputs": [
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                },
+                {
+                    "contents": {
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
+                        "externalIds": [
+                            {
+                                "id": "TEST",
+                                "provider": "TEST"
+                            }
+                        ]
+                    },
+                    "type": "EXTERNAL"
+                }
+            ],
+            "crosscheckFingerprints.cachedFilePath": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/all_stale_cache.crosscheck_metrics.txt",
+            "crosscheckFingerprints.calculateTumorAwareResults": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.createNewCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.crosscheckBy": null,
+            "crosscheckFingerprints.inputsToFile.jobMemory": null,
+            "crosscheckFingerprints.inputsToFile.threads": null,
+            "crosscheckFingerprints.inputsToFile.timeout": null,
+            "crosscheckFingerprints.outputPrefix": "out",
+            "crosscheckFingerprints.runCached.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCached.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCachedInverse.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCachedInverse.jobMemory": null,
+            "crosscheckFingerprints.runCachedInverse.lodThreshold": null,
+            "crosscheckFingerprints.runCachedInverse.modules": null,
+            "crosscheckFingerprints.runCachedInverse.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCachedInverse.threads": null,
+            "crosscheckFingerprints.runCachedInverse.timeout": null,
+            "crosscheckFingerprints.runCachedInverse.validationStringency": null,
+            "crosscheckFingerprints.runCached.jobMemory": null,
+            "crosscheckFingerprints.runCached.lodThreshold": null,
+            "crosscheckFingerprints.runCached.modules": null,
+            "crosscheckFingerprints.runCached.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCached.threads": null,
+            "crosscheckFingerprints.runCached.timeout": null,
+            "crosscheckFingerprints.runCached.validationStringency": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.compareAgainst": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenMismatch": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.exitCodeWhenNoValidChecks": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.jobMemory": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.lodThreshold": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.modules": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.picardMaxMemMb": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.threads": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.timeout": null,
+            "crosscheckFingerprints.runCrosscheckFingerprints.validationStringency": null,
+            "crosscheckFingerprints.usePowerOfCache.jobMemory": null,
+            "crosscheckFingerprints.usePowerOfCache.threads": null,
+            "crosscheckFingerprints.usePowerOfCache.timeout": null
+        },
+        "description": "All the records in the cache are stale. Same as having no cache.",
+        "engineArguments": {
+            "write_to_cache": false,
+            "read_from_cache": false
+        },
+        "id": "all_stale_cache",
+        "metadata": {
+            "crosscheckFingerprints.crosscheckMetrics": {
+                "contents": [
+                    {
+                        "outputDirectory": "@SCRATCH@/@DATE@_Workflow_crosscheckFingerprints_all_stale_cache@JENKINSID@"
+                    }
+                ],
+                "type": "ALL"
+            }
+        },
+        "validators": [
+            {
+                "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
+                "metrics_compare": "@CHECKOUT@/tests/compare.sh",
+                "output_metrics": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/no_cache.crosscheck_metrics.txt",
+                "type": "script"
+            }
+        ]
     }
 ]

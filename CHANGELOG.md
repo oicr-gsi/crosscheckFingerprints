@@ -1,4 +1,5 @@
 ## Unreleased
+- Fixed bug where workflow would crash if the cache was all stale libraries
 
 ## 3.0.0 - 2025-06-16
 - A previously cached result is an optional parameter. If supplied, only new comparisons will be calculated.
