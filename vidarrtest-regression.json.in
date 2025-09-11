@@ -6,7 +6,7 @@
             "crosscheckFingerprints.inputs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -18,7 +18,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -30,7 +30,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -42,7 +42,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test01.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -54,7 +54,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test02.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -139,7 +139,7 @@
             "crosscheckFingerprints.inputs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -151,7 +151,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -163,7 +163,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -175,7 +175,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test01.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -187,7 +187,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test02.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -272,7 +272,7 @@
             "crosscheckFingerprints.inputs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -284,7 +284,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_0134_02_LB01-01_20241216_LH00130_0106_B22K77MLT4_7_CAGTTCTG-GTCAGTCA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_Test01.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -296,7 +296,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_0134_01_LB01-01_20241216_LH00130_0106_B22K77MLT4_8_TTGGTGAG-CACGTCTA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BTC_Test02.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -381,7 +381,7 @@
             "crosscheckFingerprints.inputs": [
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_010248_Ly_R_nn_1-7_LB01-01_20250523_LH00224_0160_B22V7Y3LT4_5_TCAGGCTT-ATCATGCG.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OCT_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -393,7 +393,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_0016004_02_LB01-01_20241002_LH00224_0095_A22HW35LT4_2_CCTCAGTT-CAGCATAC.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -405,7 +405,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_1066_02_LB01-01_20241218_LH00224_0120_A22K23HLT4_6_TACACGCT-AGAGCAGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_Test.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -417,7 +417,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_7_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test01.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
@@ -429,7 +429,7 @@
                 },
                 {
                     "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_0477204_02_LB01-01_20240802_LH00224_0074_A22CVMTLT4_3_ACGACTTG-AACAGCGA.vcf.gz",
+                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test02.vcf.gz",
                         "externalIds": [
                             {
                                 "id": "TEST",
