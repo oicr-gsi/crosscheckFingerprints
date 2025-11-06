@@ -1,4 +1,5 @@
 ## Unreleased
+- Expose the SECOND_INPUT parameter (naming it `compareAgainst`)
 
 ## 3.1.0 - 2025-07-25
 - Fixed bug where workflow would crash if the cache was all stale libraries
