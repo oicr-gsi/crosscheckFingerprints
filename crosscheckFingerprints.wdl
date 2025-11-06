@@ -2,6 +2,7 @@ version 1.0
 workflow crosscheckFingerprints {
     input {
         Array[File] inputs
+        Array[File]? compareAgainst
         String? cachedFilePath
         String haplotypeMapFileName
         String haplotypeMapDir = "$CROSSCHECKFINGERPRINTS_HAPLOTYPE_MAP_ROOT"
@@ -14,6 +15,7 @@ workflow crosscheckFingerprints {
     parameter_meta {
         inputs: "A list of SAM/BAM/VCF files to fingerprint."
         cachedFilePath: "Previous output of this workflow. If given, only new comparisons will be calculated."
+        compareAgainst: "If defined, inputs are compared against these files. Ignored if cachedFilePath is defined."
         haplotypeMapFileName: "The file name that lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting."
         haplotypeMapDir: "The directory that contains haplotype map files. By default the modulator data directory."
         outputPrefix: "Text to prepend to all output."
@@ -51,11 +53,19 @@ workflow crosscheckFingerprints {
             inputs = inputs
     }
 
-    # Without a cached file, compare all libraries against each other (L^2)
+    # Without a cached file, compare all libraries against each other (L^2) or against a specified list
     if (!defined(cachedFilePath)) {
+        if (defined(compareAgainst)) {
+            call inputsToFile as compareAgainstFile {
+                input:
+                    inputs = select_first([compareAgainst])
+            }
+        }
+
         call runCrosscheckFingerprints {
             input:
                 compare = inputsToFile.inputAsFile,
+                compareAgainst = compareAgainstFile.inputAsFile,
                 haplotypeMap = haplotypeMap,
                 outputPrefix = outputPrefix,
                 crosscheckBy = crosscheckBy,
