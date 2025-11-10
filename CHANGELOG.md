@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 4.0.0 - 2025-11-06
 - Expose the SECOND_INPUT parameter (naming it `compareAgainst`)
 
 ## 3.1.0 - 2025-07-25
