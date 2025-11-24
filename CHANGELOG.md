@@ -1,4 +1,6 @@
 ## Unreleased
+- Change `compareAgainst` from File to String. Ensures these files aren't tracked by internal system.
+- Added a new workflow name `crosscheckFingerprints_lane_level`
 
 ## 4.0.0 - 2025-11-06
 - Expose the SECOND_INPUT parameter (naming it `compareAgainst`)
