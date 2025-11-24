@@ -543,54 +543,10 @@
             ],
             "crosscheckFingerprints.cachedFilePath": null,
             "crosscheckFingerprints.compareAgainst": [
-                {
-                    "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_Test.vcf.gz",
-                        "externalIds": [
-                            {
-                                "id": "TEST",
-                                "provider": "TEST"
-                            }
-                        ]
-                    },
-                    "type": "EXTERNAL"
-                },
-                {
-                    "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_Test.vcf.gz",
-                        "externalIds": [
-                            {
-                                "id": "TEST",
-                                "provider": "TEST"
-                            }
-                        ]
-                    },
-                    "type": "EXTERNAL"
-                },
-                {
-                    "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test01.vcf.gz",
-                        "externalIds": [
-                            {
-                                "id": "TEST",
-                                "provider": "TEST"
-                            }
-                        ]
-                    },
-                    "type": "EXTERNAL"
-                },
-                {
-                    "contents": {
-                        "configuration": "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test02.vcf.gz",
-                        "externalIds": [
-                            {
-                                "id": "TEST",
-                                "provider": "TEST"
-                            }
-                        ]
-                    },
-                    "type": "EXTERNAL"
-                }
+                "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/NEOS_Test.vcf.gz",
+                "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/BDWGTS_Test.vcf.gz",
+                "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test01.vcf.gz",
+                "/.mounts/labs/gsi/testdata/crosscheckFingerprints/input_data/v3/OLALA_Test02.vcf.gz"
             ],
             "crosscheckFingerprints.calculateTumorAwareResults": null,
             "crosscheckFingerprints.createNewCrosscheckFingerprints.jobMemory": null,

@@ -1,6 +1,7 @@
 {
     "names": [
-        "crosscheckFingerprints"
+        "crosscheckFingerprints",
+        "crosscheckFingerprints_lane_level"
     ],
     "wdl": "crosscheckFingerprints.wdl"
 }
