@@ -7,3 +7,4 @@ set -o pipefail
 cd $1
 
 cat *.crosscheck_metrics.txt 
+cat *.metadata.json

@@ -4,6 +4,7 @@ workflow crosscheckFingerprints {
         Array[File] inputs
         Array[String]? compareAgainst
         String? cachedFilePath
+        Array[Map[String, String]]? metadata
         String haplotypeMapFileName
         String haplotypeMapDir = "$CROSSCHECKFINGERPRINTS_HAPLOTYPE_MAP_ROOT"
         String outputPrefix = "output"
@@ -16,6 +17,7 @@ workflow crosscheckFingerprints {
         inputs: "A list of SAM/BAM/VCF files to fingerprint."
         cachedFilePath: "Previous output of this workflow. If given, only new comparisons will be calculated."
         compareAgainst: "If defined, inputs are compared against these files. Ignored if cachedFilePath is defined."
+        metadata: "Metadata of all input files. Used for downstream processes that need to know library metadata to make calls."
         haplotypeMapFileName: "The file name that lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting."
         haplotypeMapDir: "The directory that contains haplotype map files. By default the modulator data directory."
         outputPrefix: "Text to prepend to all output."
@@ -42,6 +44,10 @@ workflow crosscheckFingerprints {
             crosscheckMetrics: {
                 description: "The crosschecksMetrics file produced by Picard CrosscheckFingerprints",
                 vidarr_label: "crosscheckMetrics"
+            },
+            crosscheckMetadata: {
+                description: "The metadata that was sent to the workflow",
+                vidarr_label: "crosscheckMetadata"
             }
         }
     }
@@ -123,10 +129,28 @@ workflow crosscheckFingerprints {
         }
     }
 
+    if (defined(metadata)) {
+        Array[Map[String, String]] meta_array = select_first([metadata])
+        call writeMetadata {
+            input:
+                metadata = meta_array,
+                outputPrefix = outputPrefix
+        }
+    }
+    
+    if (!defined(metadata)) {
+        call writeEmptyMetadata {
+            input:
+                outputPrefix = outputPrefix
+        }
+    }
+
     File metrics = select_first([runCrosscheckFingerprints.crosscheckMetrics, createNewCrosscheckFingerprints.crosscheckMetrics])
+    File meta_out = select_first([writeMetadata.out, writeEmptyMetadata.out])
 
     output {
         File crosscheckMetrics = metrics
+        File crosscheckMetadata = meta_out
     }
 }
 
@@ -365,6 +389,88 @@ task createNewCrosscheckFingerprints {
 
     runtime {
         memory:  "~{jobMemory} GB"
+        cpu:     "~{threads}"
+        timeout: "~{timeout}"
+    }
+}
+
+task writeMetadata {
+    input {
+        Array[Map[String, String]] metadata
+        String outputPrefix
+        Int timeout = 1
+        Int memory = 1
+        Int threads = 1
+        String modules = "jq/1.6"
+    }
+
+    # Necessary as Cromwell 44 has bug that prevents Array being used in write_json. Fixed in Cromwell 54
+    File out_metadata = write_json(object {dummy: metadata})
+
+    command <<<
+        set -euo pipefail
+        jq '.dummy' ~{out_metadata} > "~{outputPrefix}.metadata.json"
+    >>>
+
+    output {
+        File out = "~{outputPrefix}.metadata.json"
+    }
+
+    parameter_meta {
+        metadata: "Metadata to add to the CrosscheckFingerprints data"
+        outputPrefix: "Text to prepend to all output."
+        timeout: "The hours until the task is killed."
+        memory: "The GB of memory provided to the task."
+        threads: "The number of threads the task has access to."
+        modules: "The modules that will be loaded."
+    }
+
+    meta {
+        out_metadata: {
+            out: "A file that's storing the metadata JSON string"
+        }
+    }
+
+    runtime {
+        modules: "~{modules}"
+        memory:  "~{memory} GB"
+        cpu:     "~{threads}"
+        timeout: "~{timeout}"
+    }
+}
+
+task writeEmptyMetadata {
+    input {
+        String outputPrefix
+        Int timeout = 1
+        Int memory = 1
+        Int threads = 1
+    }
+
+    command <<<
+        set -euo pipefail
+        echo "[]" > "~{outputPrefix}.metadata.json"
+    >>>
+
+    output {
+        File out = "~{outputPrefix}.metadata.json"
+    }
+
+    parameter_meta {
+        outputPrefix: "Text to prepend to all output."
+        timeout: "The hours until the task is killed."
+        memory: "The GB of memory provided to the task."
+        threads: "The number of threads the task has access to."
+    }
+
+    meta {
+        out_metadata: {
+            out: "A file that's storing the metadata JSON string"
+        }
+    }
+
+    runtime {
+        memory:  "~{memory} GB"
         cpu:     "~{threads}"
         timeout: "~{timeout}"
     }
