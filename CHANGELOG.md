@@ -1,4 +1,6 @@
 ## Unreleased
+
+## 5.0.0 - 2025-11-24
 - Change `compareAgainst` from File to String. Ensures these files aren't tracked by internal system.
 - Added a new workflow name `crosscheckFingerprints_lane_level`
 
